@@ -41,3 +41,32 @@ yarn-error.log*
 # Drizzle / DB
 drizzle/
 .drizzle-studio
+
+# Old project structure at root level
+../src/
+../tests/
+../scripts/
+../k8s/
+../.github/
+../drizzle.config.ts
+../env.ts
+../vitest.config.ts
+../Dockerfile
+../docker-compose.yml
+../docker-compose.prod.yml
+../Makefile
+../railway.json
+../render.yaml
+../SafeSite-API.postman_collection.json
+../schedule.txt
+../CHANGES.md
+../E2E_TESTING_GUIDE.md
+../delete-button.svg
+../effective-typescript.pdf
+../stock_manager_plan.md
+../stock-design.md
+../stock.md
+../typescript-guide.md
+../frontend-nextStep.md
+../frontend.md
+../fsd.md
