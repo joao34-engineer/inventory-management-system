@@ -1,0 +1,63 @@
+# Dependencies
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Development files
+.git/
+.gitignore
+.prettierrc
+.editorconfig
+*.md
+!README.md
+
+# Test files
+tests/
+coverage/
+.nyc_output/
+*.test.ts
+*.spec.ts
+vitest.config.ts
+
+# Documentation
+docs/
+*.pdf
+API-v5.md
+API_DOCS.md
+project-roadmap.md
+project.md
+schedule.txt
+test-best-practice.md
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build outputs
+dist/
+build/
+out/
+
+# Logs
+logs/
+*.log
+
+# Misc
+.turbo/
+.cache/
+migrations/
+drizzle.config.ts

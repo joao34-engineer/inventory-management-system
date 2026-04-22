@@ -1,0 +1,38 @@
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.auth-header h1 {
+  font-size: 18px;
+  
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-brand-footer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+
+  font-size: 35rem;
+  font-weight: 800;
+  color: var(--color-foreground);
+  opacity: 0.05;
+  letter-spacing: -10px;
+  pointer-events: none;
+  
+}
+
+.auth-page > *:not(.login-brand-footer) {
+  position: absolute;
+  z-index: 1;
+}

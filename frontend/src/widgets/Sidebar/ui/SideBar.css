@@ -1,0 +1,189 @@
+/* Sidebar toggle is ONLY for Desktop */
+@media (max-width: 767px) {
+  .sidebar-toggle,
+  .sidebar {
+    display: none !important;
+  }
+}
+
+/* On Desktop, make sure the toggle is visible */
+@media (min-width: 768px) {
+  .sidebar-toggle {
+    display: flex;
+  }
+}
+
+/* Sidebar Button Style (Desktop Only) */
+.sidebar-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* Perfect Circle like Gemini */
+  min-width: 40px !important;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: 50%;
+  
+  background: transparent;
+  border: none;
+  color: var(--color-foreground);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.sidebar-toggle:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Sidebar Drawer Style */
+.sidebar {
+  position: fixed;
+  top: 0; 
+  left: 0; 
+  width: 72px; 
+  height: 100vh;
+  z-index: 2500;
+  padding-top: 20px; 
+  overflow: hidden; 
+  
+  background: linear-gradient(to bottom,
+      rgba(105, 113, 107, 0.154),
+      rgba(105,
+        113,
+        107,
+        0.57));
+  
+  /* Safari support */
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar.open {
+  width: 280px; 
+}
+
+/* FIX ICON ALIGNMENTS */
+.sidebar-header {
+  padding: 0 16px 20px 16px;
+}
+
+.nav-icon {
+  font-size: 1.3rem;
+  min-width: 24px;
+  text-align: center;
+}
+
+.nav-label {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  white-space: nowrap;
+}
+
+.sidebar.open .nav-label {
+  opacity: 1;
+}
+
+/* THE GEMINI PILL BUTTON */
+.sidebar-primary-action {
+  padding: 0 16px 20px 16px;
+}
+
+.gemini-new-btn {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(255, 255, 255, 0.05); 
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px; /* high border radius for pill shape */
+  padding: 8px 6px; /* tight padding for circle */
+  width: 38px; 
+  height: 38px;
+  color: var(--color-foreground);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.gemini-new-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar.open .gemini-new-btn {
+  width: 100%; 
+  padding: 8px 16px; 
+}
+
+/* NAVIGATION */
+.sidebar-nav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0 12px;
+  gap: 4px;
+}
+
+.nav-section-title {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+  padding: 8px 16px;
+  margin-bottom: 4px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  white-space: nowrap;
+}
+
+.sidebar.open .nav-section-title {
+  opacity: 1;
+}
+
+.nav-item {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  padding: 10px 14px; 
+  border-radius: 20px;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-action {
+  background: none;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+
+/* FOOTER */
+.sidebar-footer {
+  padding: 12px;
+  margin-top: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.admin-profile {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 14px;
+  color: rgba(255, 255, 255, 0.8);
+}

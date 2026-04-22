@@ -1,0 +1,18 @@
+:root {
+  --color-bg: #000d08;
+  --color-foreground: #ffffff;
+  --font-main: 'Inter', system-ui, sans-serif;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-foreground);
+  font-family: var(--font-main);
+  margin: 0;
+}
+
+:root {
+  --header-height: 72px;
+}
+
+/* #00180d */

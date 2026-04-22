@@ -1,0 +1,190 @@
+/* Container with Glassmorphism */
+.navigation {
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+  background: linear-gradient(to bottom,
+      rgba(105,
+        113,
+        107,
+        0.154),
+      rgba(105,
+        113,
+        107,
+        0.57));
+
+  /* Safari support */
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  height: 72px;
+  display: flex;
+  align-items: center;
+}
+
+.navigation-inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+/* Brand styling */
+.logo-text {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: var(--color-foreground);
+  text-transform: uppercase;
+  color: rgb(210, 210, 210);
+  margin: 0;
+}
+
+/* Desktop Links */
+.desktop-menu {
+  display: none;
+  gap: 40px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--color-accent);
+  color: black;
+}
+
+/* Desktop Actions */
+.navbar-actions {
+  display: none;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Custom "Ghost" toggle button */
+.btn-nav-toggle {
+  display: flex;
+  min-width: 44px;
+  height: 44px;
+  padding: 0;
+  background: transparent;
+  border: 1px solid rgba(71, 40, 40, 0.2);
+  font-size: 1.2rem;
+  color: var(--color-foreground);
+}
+
+.btn-nav-toggle:hover {
+  background: rgba(15, 12, 12, 0.701);
+}
+
+/* Responsive Logic */
+@media (min-width: 768px) {
+  .desktop-menu {
+    display: flex;
+  }
+
+  .navbar-actions {
+    display: flex;
+  }
+
+  .btn-nav-toggle {
+    display: none;
+  }
+}
+
+/* Mobile Menu Overlay */
+.navbar-mobile-overlay {
+  position: absolute;
+  top: 72px;
+  left: 0;
+  right: 0;
+  background-color: rgb(39, 36, 36);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 24px;
+  animation: slideDown 0.3s ease-out;
+  background: linear-gradient(to bottom,
+      rgba(91,
+        90,
+        90,
+        0.90),
+      rgba(91,
+        90,
+        90,
+        0.90));
+
+}
+
+.navbar-links-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+
+}
+
+.nav-links-mobile {
+  text-decoration: none;
+  color: var(--color-foreground);
+  font-size: 1.1rem;
+  font-weight: 500;
+  gap: 8px;
+  align-items: center;
+  width: fit-content;
+  border-radius: 15px;
+  transition: all 0.2s ease;
+}
+
+.nav-links-mobile:hover {
+  color: var(--color-accent);
+  color: rgb(0, 0, 0);
+}
+
+.mobile-separator {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 10px 0;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .btn-nav-toggle,
+  .navbar-mobile-overlay {
+    display: none !important;
+  }
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  /* Centers them vertically */
+  gap: 15px;
+  /* Adds the perfect space between burger and logo */
+}
+
+.btn-action {
+  width: 50px;
+  height: 50px;
+}

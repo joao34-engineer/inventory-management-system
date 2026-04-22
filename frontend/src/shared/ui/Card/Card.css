@@ -1,0 +1,10 @@
+.ui-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 20px 32px;
+  width: 100%;
+  max-width: 350px;
+  box-sizing: border-box;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  color: #1a1a1a;
+}

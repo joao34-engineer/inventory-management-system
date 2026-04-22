@@ -1,0 +1,50 @@
+.ui-button {
+  background-color: #e3d8d8;
+  /* Professional dark color */
+  color: #171717;
+  border: none;
+  border-radius: 15px;
+  height: 52px;
+  width: 100px;
+  min-width: 100px;
+  padding: 0 24px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ui-button:hover {
+  background-color: #151414;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  color: white;
+}
+
+.ui-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* A special "Link" style for the small toggle button at the bottom */
+.btn-toggle {
+  background: none;
+  color: #1a1b1b;
+  min-width: auto;
+  height: auto;
+  padding: 0;
+  margin-left: 5px;
+  box-shadow: none;
+}
+
+.btn-toggle:hover {
+  background: none;
+  color: #2f5071;
+  text-decoration: underline;
+  box-shadow: none;
+  transform: none;
+}

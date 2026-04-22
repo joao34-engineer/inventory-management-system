@@ -1,0 +1,32 @@
+/* The .stat-card class is applied to the shared Card component */
+.stat-card.ui-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 20px 24px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  transition: border-color 0.2s ease;
+  width: auto; /* Allow grid to control width */
+  max-width: none;
+  box-shadow: none;
+}
+
+.stat-card.ui-card:hover {
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-foreground);
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}

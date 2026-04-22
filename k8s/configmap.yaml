@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: safesite-config
+  namespace: safesite
+data:
+  NODE_ENV: 'production'
+  PORT: '3000'
+  BCRYPT_SALT_ROUNDS: '12'
+  LOG_LEVEL: 'info'
+  ALLOWED_ORIGINS: 'https://yourdomain.com'

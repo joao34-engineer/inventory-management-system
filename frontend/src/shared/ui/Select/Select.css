@@ -1,0 +1,53 @@
+.select-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.select-label {
+  color: #aaa;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-left: 4px;
+}
+
+.select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.select-field {
+  width: 100%;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: white;
+  font-size: 1rem;
+  appearance: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.select-field:focus {
+  outline: none;
+  border-color: #6366f1;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+}
+
+.select-icon {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #666;
+}
+
+.select-field option {
+  background: #111;
+  color: white;
+}
